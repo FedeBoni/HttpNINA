@@ -1,0 +1,6 @@
+HttpNINA	KEYWORD1
+listen	KEYWORD2
+getQueryValue	KEYWORD2
+sendHeader	KEYWORD2
+sendResponse	KEYWORD2
+path	KEYWORD2
