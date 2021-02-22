@@ -31,8 +31,8 @@ void loop(){
     Serial.println(http.path);
     Serial.println(http.getQueryValue("value"));
     http.sendHeader(200); // OK code
-    http.sendResponce("Hello word!");
-    http.endResponce;
+    http.sendResponse("Hello word!");
+    http.endResponse();
 }
 
 ```
