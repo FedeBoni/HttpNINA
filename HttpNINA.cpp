@@ -12,22 +12,17 @@ void HttpNINA::init(int port)
 
 void HttpNINA::start()
 {
-	Serial.print("Starting HttpNINA Server... ");
 	_server->begin();
-	Serial.println("Done");
 }
 
 void HttpNINA::stop()
 {
-	Serial.print("Stopping HttpNINA Server... ");
 	delete _server;
-	Serial.println("Done");
 }
 
 bool HttpNINA::listen(bool wait)
 {
 	bool onListen = true;
-	//_server -> begin();
 	while (onListen)
 	{
 		_client = _server->available();
@@ -126,12 +121,11 @@ void HttpNINA::sendHeader(int cod)
 void HttpNINA::sendResponse(String resp)
 {
 	_client.print(resp);
-	_client.stop();
 }
 
-void HttpNINA::sendRaw(String raw)
+void HttpNINA::endResponse()
 {
-	_client.print(raw);
+	_client.stop();
 }
 
 void HttpNINA::readParam(String w_path)

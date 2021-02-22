@@ -21,7 +21,7 @@ public:
   String getQueryValue(String key);
   void sendHeader(int cod);
   void sendResponse(String resp);
-  void sendRaw(String raw);
+  void endResponse();
   bool listen(bool wait = true);
   void start();
   void stop();
